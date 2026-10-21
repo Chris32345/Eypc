@@ -5,8 +5,8 @@ sudo apt-get update
 sudo apt-get install -y nasm binutils gdb gcc-multilib
 
 Ensamblar:
-as hello.s -o hello.o
-ld hello.o -o hello
+nasm -f elf64 archivo.asm -o archivo.o
+gcc -no-pie archivo.o -o archivo
 
 Ejecutar:
 ./hello
